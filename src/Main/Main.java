@@ -72,43 +72,44 @@ public class Main {
                     manager.SeeReservationForId(idLookFor);
                     break;
                 case 3:
-                    System.out.println("Hello this is our Food and Drink Menu.");
-                    System.out.println("1. Entrees");
-                    System.out.println("2. Desserts");
-                    System.out.println("3. Drinks");
-                    System.out.println("4. Exit");
-                    System.out.println("Please enter the option what would you like to review:");
-                    int numberCarta = recogInt(in);
                     boolean follow2 = true;
-                    switch (numberCarta){
-                        case 1:
-                            System.out.println("These are our entrees:");
-                            List<dataPlates> plates = platesReposiData.insertDataPlates();
-                            for(dataPlates plates1 : plates){
-                                System.out.println(plates1);
-                            }
-                            break;
-                        case 2:
-                            System.out.println("These are our desserts:");
-                            List<dataSweets> sweets = sweetsReposiData.insertDataSweets();
-                            for(dataSweets sweets1 : sweets){
-                                System.out.println(sweets1);
-                            }
-                            break;
-                        case 3:
-                            System.out.println("These are our drinks:");
-                            List<dataDrinks> drinks = drinksReposiData.insertDataDrinks();
-                            for(dataDrinks drinks1 : drinks){
-                                System.out.println(drinks1);
-                            }
-                            break;
-                        case 4:
-                            System.out.println("Thank you for your visit.");
-                            follow2 = false;
-                            break;
-                        default:
-                            System.out.println("Error. Invalid option.");
-                            follow2 = false;
+                    while(follow2){
+                        System.out.println("Hello this is our Food and Drink Menu.");
+                        System.out.println("1. Entrees");
+                        System.out.println("2. Desserts");
+                        System.out.println("3. Drinks");
+                        System.out.println("4. Exit");
+                        System.out.println("Please enter the option what would you like to review:");
+                        int numberCarta = recogInt(in);
+                        switch (numberCarta){
+                            case 1:
+                                System.out.println("These are our entrees:");
+                                List<dataPlates> plates = platesReposiData.insertDataPlates();
+                                for(dataPlates plates1 : plates){
+                                    System.out.println(plates1);
+                                }
+                                break;
+                            case 2:
+                                System.out.println("These are our desserts:");
+                                List<dataSweets> sweets = sweetsReposiData.insertDataSweets();
+                                for(dataSweets sweets1 : sweets){
+                                    System.out.println(sweets1);
+                                }
+                                break;
+                            case 3:
+                                System.out.println("These are our drinks:");
+                                List<dataDrinks> drinks = drinksReposiData.insertDataDrinks();
+                                for(dataDrinks drinks1 : drinks){
+                                    System.out.println(drinks1);
+                                }
+                                break;
+                            case 4:
+                                System.out.println("Thank you for your visit.");
+                                follow2 = false;
+                                break;
+                            default:
+                                System.out.println("Error. Invalid option.");
+                        }
                     }
                     break;
                 case 4:
