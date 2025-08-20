@@ -19,8 +19,8 @@ public class Reserva implements ShowData{
         return idNumber;
     }
     public void showReserva(){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-        System.out.println("Name: " + fullName + "DNI: " + idNumber + "Date & time: "
-                                              + dateTime + "Group of : " + numPeople);
+        DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        System.out.printf("Name: %s             DNI: %d           Date & time: %s               Group of: %d.%n"
+                , fullName, idNumber, dateTime.format(formatDate), numPeople);
     }
 }
