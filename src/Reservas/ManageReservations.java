@@ -11,7 +11,6 @@ public class ManageReservations {
         reservations.add(new Reserva(fullName, idNumber, dateTime, numPeople ));
         System.out.println("Reservation successfully recorded. ");
     }
-
     public void SeeReservationForId(int idNumber){
         for(Reserva r : reservations){
             if(r.getIdNumber()==idNumber){
